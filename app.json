@@ -1,0 +1,57 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/yuyue/yuyue",
+    "pages/my/my",
+    "pages/share/share",
+    "pages/connect/connect"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTitleText": "伊丽源美容养生会所",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar":{
+    "color":"#000000",
+    "selectedColor":"#DB78AD",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "black",
+    "list":[
+      {
+        "color": "pink",   
+       "text":"商城",
+        "pagePath":"pages/index/index",
+        "iconPath":"img/font.png",
+        "selectedIconPath":"img/font-1.png"
+        
+      },
+      {
+        "pagePath": "pages/yuyue/yuyue",
+        "iconPath": "img/connect.png",
+        "selectedIconPath": "img/connect-1.png",
+       "text":"预约"
+      },
+      {
+        "pagePath": "pages/share/share",
+        "iconPath": "img/share.png",
+        "selectedIconPath": "img/share-1.png",
+        "text": "分销中心"
+      },
+      {
+        "pagePath": "pages/connect/connect",
+        "iconPath": "img/tel.png",
+        "selectedIconPath": "img/tel-1.png",
+        "text":"美丽热线"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "img/my.png",
+        "selectedIconPath": "img/my-1.png",
+        "text":"我"
+      }
+    ]
+  }
+}
