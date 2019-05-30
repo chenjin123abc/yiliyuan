@@ -1,0 +1,24 @@
+<!--pages/miaosha/miaosha.wxml-->
+<view style="height:30px"></view>
+<view class='boxpintuan'>    
+      <view class='mengban'>
+      <image class='miaosha' src='../../img/ms.jpg'></image>
+        <navigator class='naviga' url='{{url[0].src}}'>
+      <image src='{{url[0].url}}' class='imgs'></image>
+      </navigator>
+       <text class='name'>{{url[0].name}}</text>
+       <text class='price'>￥{{url[0].price}}</text>
+       <text class='fenge'></text>
+       <view decode='{{true}}' class='pinnumber'>已秒{{url[0].number}}件</view>
+      </view>
+      <view class='mengban'>
+      <image class='miaosha1' src='../../img/ms.jpg'></image>
+      <navigator class='naviga' url='{{url[0].src}}'>
+      <image src='{{url[1].url}}' class='imgs'></image>
+      </navigator>
+      <text class='name'>{{url[1].name}}</text>
+       <text class='price'>￥{{url[1].price}}</text>
+       <text class='fenge'></text>
+       <view decode='{{true}}' class='pinnumber'>已秒{{url[1].number}}件</view>
+      </view>
+</view>  

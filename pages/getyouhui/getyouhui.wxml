@@ -1,0 +1,16 @@
+<!--pages/getyouhui/getyouhui.wxml-->
+<!-- <view class='shuom'>~数量有限，送完即止~</view> -->
+<view wx:for="{{youhuiquan}}" wx:for-index="ind" wx:for-item="item" wx:for-id='id'>
+<text class='biaoti'>￥</text>
+<text class='money'>{{item.money}}</text>
+<text class='tiaojian'>{{item.leixing}}</text>
+<text class='tiaojian1'>{{item.shiyongtiaojian}}</text>
+<text class='youxiao'>有效期：{{item.youxiaoqi}}</text>
+<text class='fanwei'>适用范围：{{item.fanwei}}</text>
+<view class="box">
+  <image bindtap='getyouhui' data-src='{{item.src}}' data-id='{{item.id}}' class='getyh' src='{{item.src}}'></image>
+</view>
+<view class='imgbox'>
+  <image class='youhui' src='{{item.beijing}}'></image>
+</view>
+</view>

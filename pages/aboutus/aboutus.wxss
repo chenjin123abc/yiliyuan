@@ -1,0 +1,72 @@
+.title{
+  margin: 30px;
+  height: 40px;
+  font-size: 20px;
+  text-align: center;
+  font-family:'Times New Roman', Times, serif;
+  color: white;
+  background-color: rgb(97, 65, 173);
+  line-height: 40px;
+  border-radius: 10px;
+}
+.img{
+  width: 100px;
+  height: 100px;
+  float: left;
+  clear: both
+}
+.imgs{
+ width: 300rpx;
+  height: 380rpx;
+  /* background: white; */
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around
+}
+.price{
+  color: red;
+  font-size: 25rpx;
+}
+.name{
+  margin-top:5px;
+  padding-left: 40px
+}
+.sale{
+  padding-left: 140rpx;
+  color: gray;
+  font-size: 20rpx
+}
+.pintuan{
+  width: 750rpx;
+  height: 530rpx;
+  background-color: gainsboro;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.yanyu{
+width: 300rpx;
+height: 60rpx;
+font-size: 10px;
+color: whitesmoke;
+font-size-adjust:inherit;
+font-family:'Times New Roman', Times, serif;
+background-color: rgb(238, 30, 134);
+border-radius: 5px
+
+}
+.biankuang{
+  padding: 10rpx;
+  width: 300rpx;
+  height: 380rpx;
+  background-color: white
+}
+.aboutus{
+  margin: 30px;
+  height: 40px;
+  font-size: 20px;
+  text-align: center;
+  background-color: pink;
+  border-radius: 10px;
+  line-height: 40px
+}

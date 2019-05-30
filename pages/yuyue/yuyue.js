@@ -5,7 +5,68 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    img: [{ src: "../../imggoods/1.jpg", url:"../testpage/testpage"},
+      { src: "../../imggoods/2.jpg", url: "../testpage/testpage" },
+      { src: "../../imggoods/3.jpg", url: "../testpage/testpage" },
+    ],
+    kangshuai:[
+      { src:"../../imggoods/1.jpg",
+        productname:"抗衰神器",
+        price:299,
+        sale:23,
+        url:"../testpage/testpage"
+      },
+      {
+        src: "../../imggoods/1.jpg",
+        productname: "抗衰神器",
+        price: 299,
+        sale: 23,
+        url: "../testpage/testpage"
+      },
+      {
+        src: "../../imggoods/1.jpg",
+        productname: "抗衰神器",
+        price: 299,
+        sale: 23,
+        url: "../testpage/testpage"
+      },
+      { src:"../../imggoods/1.jpg",
+        productname:"抗衰神器",
+        price:299,
+        sale:23,
+        url: "../testpage/testpage"
+      },
+    ],
+    jianfei: [
+      {
+        src: "../../imggoods/1.jpg",
+        productname: "减肥神器",
+        price: 299,
+        sale: 23,
+        url: "../testpage/testpage"
+      },
+      {
+        src: "../../imggoods/1.jpg",
+        productname: "减肥神器",
+        price: 299,
+        sale: 23,
+        url: "../testpage/testpage"
+      },
+      {
+        src: "../../imggoods/1.jpg",
+        productname: "减肥神器",
+        price: 299,
+        sale: 23,
+        url: "../testpage/testpage"
+      },
+      {
+        src: "../../imggoods/1.jpg",
+        productname: "减肥神器",
+        price: 299,
+        sale: 67,
+        url: "../testpage/testpage"
+      },
+    ],
   },
 
   /**

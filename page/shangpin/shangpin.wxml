@@ -1,0 +1,108 @@
+<!--page/shangpin/shangpin.wxml-->
+<!-- 这是上部的swip页面； -->
+<view style='height:350px;position: relative;'>
+  <swiper indicator-dots='true' indicator-color='red' duration='1000' autoplay='true' interval='3000' class='swip'>
+    <block wx:for="{{img}}">
+      <swiper-item>
+        <view class="juzhong">
+          <image class='image' src="{{item.src}}"></image>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<!-- 接下来是产品的销量和价格 -->
+<view style=' position: relative;'>
+  <view class='name'>{{name}}</view>
+  <view class='price'>￥{{price}}
+    <font class="yuanjia">原价{{yuanjia}}</font>
+    <font class='xiaoliang'>{{xiaol}}人已付款</font>
+  </view>
+  <view class='flex-grow-0'>
+    <button open-type='share' aria-disabled="false" role="button" class='share-btn'>
+      <image src='../../img/fenxiang.jpg' style="width: 27px;height: 27px"></image>
+      <view>分享</view>
+    </button>
+
+  </view>
+</view>
+<view class='xuanze' bindtap='show'>
+  <view class='inside'>选择</view>
+  <view class='inside' style='color:gray; left:100px;font-size:15px'>规格</view>
+  <view class='iconfont icon-icon_arrow_right' style='font-size:20px;text-align:right; line-height:35px;'></view>
+</view>
+<view>
+  <block wx:for="{{img}}">
+    <view class="juzhong detai">
+      <image class='image' src="{{item.src}}"></image>
+    </view>
+  </block>
+</view>
+<view class="flex-grow-1 flex-row" style="position:fixed; bottom:0;width: 750rpx;">
+  <view bindtap='getback' class='buttom-border'>
+    <icon class='iconfont icon-tubiaozhizuomoban zhuye'>
+      <view style='font-size:12px;'>主页</view>
+    </icon>
+  </view>
+  <view wx:if='{{shoucang==0}}' bindtap='shou' class='buttom-border'>
+    <icon class='iconfont icon-shoucang zhuye'>
+      <view style='font-size:12px'>收藏</view>
+    </icon>
+  </view>
+  <view wx:elif='{{shoucang==1}}' bindtap='shou' class='buttom-border'>
+    <icon class='iconfont icon-shoucang zhuye' style='color:red'>
+      <view style='font-size:12px'>已收藏</view>
+    </icon>
+  </view>
+  <view bindtap='gouwu' class='flex-grow-1 flex-y-center flex-x-center add-cart'>加入购物车</view>
+  <view bindtap='show' class='flex-grow-1 flex-y-center flex-x-center buy-now'>立即购买</view>
+</view>
+<view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+  <view class='shang'>
+    <view bindtap='close' class='guanbi'>
+      <view class='iconfont icon-guanbi' style='font-size:20px;'></view>
+      <view style='font-size:12px;'>关闭</view>
+    </view>
+    <view class="goods-pic-box">
+      <image bindtap="previewImage" data-url="{{goumaiyemian}}" mode="aspectFill" src="{{goumaiyemian}}" class='shouimg'>
+      </image>
+    </view>
+    <view class='tanprice'>￥{{price}}</view>
+    <view class='kucun'>库存：{{kucun}}</view>
+  </view>
+  <view class='zhong'>
+    <view style="font-size:18px;margin-left:10px">规格</view>
+    <view class='guige'>{{guige}}</view>
+  </view>
+  <view class='xia'>
+    <view class="flex-grow-1 flex-row" style="position:fixed; bottom:0;width: 750rpx;">
+      <view bindtap='getback' class='buttom-border'>
+        <icon class='iconfont icon-tubiaozhizuomoban zhuye'>
+          <view style='font-size:12px;'>主页</view>
+        </icon>
+      </view>
+      <view wx:if='{{shoucang==0}}' bindtap='shou' class='buttom-border'>
+        <icon class='iconfont icon-shoucang zhuye'>
+          <view style='font-size:12px'>收藏</view>
+        </icon>
+      </view>
+      <view wx:elif='{{shoucang==1}}' bindtap='shou' class='buttom-border'>
+        <icon class='iconfont icon-shoucang zhuye' style='color:red'>
+          <view style='font-size:12px'>已收藏</view>
+        </icon>
+      </view>
+      <view bindtap='gouwu' class='flex-grow-1 flex-y-center flex-x-center add-cart'>加入购物车</view>
+      <view bindtap='mai' data-name='{{name}}' data-guige='{{guige}}' data-src='{{img[0].src}}' data-number='{{shuliang}}' data-price='{{price}}' class='flex-grow-1 flex-y-center flex-x-center buy-now'>立即购买</view>
+    </view>
+  </view>
+  <view class='shuliang'>数量</view>
+  <view bindtap='jian' class='tiaojie' style='text-align:center'>
+  <view class=' iconfont icon-jian' style='font-size:8px'></view>
+  </view>
+  <view class='tiaojie1'>
+  <view ><input type='text' value='{{shuliang}}'></input></view>
+  </view>
+  <view bindtap='jia' class='tiaojie2' style='text-align:center'>
+  <view class=' iconfont icon-jia' style='font-size:8px'></view>
+  </view>
+</view>

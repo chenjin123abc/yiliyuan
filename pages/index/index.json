@@ -1,7 +1,7 @@
 {
-  "navigationBarBackgroundColor": "#000000",
+  "navigationBarBackgroundColor": "#FF82AB",
   "navigationBarTextStyle": "white",
   "navigationBarTitleText": "商城",
-  "backgroundColor": "#ffffff",
+  "backgroundColor": "#CFCFCF",
   "backgroundTextStyle": "dark"
 }

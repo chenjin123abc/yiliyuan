@@ -1,2 +1,37 @@
 <!--pages/yuyue/yuyue.wxml-->
-<view>yuyue pages</view>
+<swiper indicator-dots='true' indicator-color='red' duration='1000' autoplay='true' interval='3000'>
+  <block wx:for="{{img}}">
+    <navigator url="{{item.url}}">
+      <swiper-item>
+        <image class='swip' src="{{item.src}}"></image>
+      </swiper-item>
+    </navigator>
+  </block>
+</swiper>
+<view class='fenge'></view>
+<view class="xilie">- 抗衰修复系列 -</view>
+<view>
+  <view class='pailie' >
+  <view wx:for="{{kangshuai}}" wx:for-index="index" wx:for-item="item">
+    <navigator url='{{kangshuai[0].url}}'>
+      <image class='img' src='{{item.src}}'></image>
+    </navigator>
+    <view class='name'>{{item.productname}}</view>
+    <view class='price'>￥{{item.price}}</view>
+    <view class='sale'>已购{{item.sale}}件</view>
+  </view>
+</view>
+</view>
+
+<view class="xilie">- 纤体减肥系列 -</view>
+<view class='pailie'>
+  <view wx:for="{{jianfei}}" wx:for-index="index" wx:for-item="item">
+    <navigator url='{{item.url}}'>
+      <image class='img' src='{{item.src}}'></image>
+    </navigator>
+    <view class='name'>{{item.productname}}</view>
+    <text class='price'>￥{{item.price}}</text>
+    <text class='sale'>已购{{item.sale}}件</text>
+  </view>
+  
+</view>

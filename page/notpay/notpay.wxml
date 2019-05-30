@@ -1,0 +1,73 @@
+<view class='scrol'>
+  <scroll-view scroll-x="true">
+    <view bindtap='select' data-daifu='daifu' class="{{select1?'title':'hidden'}}">待支付</view>
+    <view bindtap='select' data-yifu='yifu' class="{{select2?'title':'hidden'}}">已支付</view>
+    <view bindtap='select' data-daishou='daishou' class="{{select3?'title':'hidden'}}">已完成</view>
+    <view bindtap='select' data-yiwancheng='yiwancheng' class="{{select4?'title':'hidden'}}">全部订单</view>
+  </scroll-view>
+</view>
+<view>
+  <image class='img' src='../../img/dingdan.jpg'></image>
+  <text class='zhifu'>{{title}}</text>
+</view>
+<view class='xiangxi' wx:if="{{select1}}" wx:for="{{notpay}}" wx:for-index="index" wx:for-item="item">
+  <view class='ddhao'>
+    <text>订单号：{{item.danhao}}</text>
+    <text style='margin-left:120px;position: absolute;'>{{item.time}}</text>
+  </view>
+  <image class='good' src='{{item.src}}'></image>
+  <view class='name'>{{item.name}}</view>
+  <view class='danjia'>￥{{item.price}}</view>
+  <view class='shuliang'>数量：{{item.number}}</view>
+  <view class='zongji'>
+  <text>总计: {{item.number*item.price}}</text>
+  <text bindtap='zhifu' class='fuqian'>支付</text>
+  </view>
+</view>
+
+<!-- 已支付订单 -->
+<view class='xiangxi' wx:if="{{select2}}" wx:for="{{yitpay}}" wx:for-index="index" wx:for-item="item">
+  <view class='ddhao'>
+    <text>订单号：{{item.danhao}}</text>
+    <text style='margin-left:120px;position: absolute;'>{{item.time}}</text>
+  </view>
+  <image class='good' src='{{item.src}}'></image>
+  <view class='name'>{{item.name}}</view>
+  <view class='danjia'>￥{{item.price}}</view>
+  <view class='shuliang'>数量：{{item.number}}</view>
+  <view class='zongji'>
+  <text>总计: {{item.number*item.price}}</text>
+  <!-- <text bindtap='zhifu' class='fuqian'>支付</text> -->
+  </view>
+</view>
+
+<!-- 已完成 -->
+<view class='xiangxi' wx:if="{{select3}}" wx:for="{{wanpay}}" wx:for-index="index" wx:for-item="item">
+  <view class='ddhao'>
+    <text>订单号：{{item.danhao}}</text>
+    <text style='margin-left:120px;position: absolute;'>{{item.time}}</text>
+  </view>
+  <image class='good' src='{{item.src}}'></image>
+  <view class='name'>{{item.name}}</view>
+  <view class='danjia'>￥{{item.price}}</view>
+  <view class='shuliang'>数量：{{item.number}}</view>
+  <view class='zongji'>
+  <text>总计: {{item.number*item.price}}</text>
+  <!-- <text bindtap='zhifu' class='fuqian'>支付</text> -->
+  </view>
+</view>
+<!-- 全部 -->
+<view class='xiangxi' wx:if="{{select4}}" wx:for="{{all}}" wx:for-index="index" wx:for-item="item">
+  <view class='ddhao'>
+    <text>订单号：{{item.danhao}}</text>
+    <text style='margin-left:120px;position: absolute;'>{{item.time}}</text>
+  </view>
+  <image class='good' src='{{item.src}}'></image>
+  <view class='name'>{{item.name}}</view>
+  <view class='danjia'>￥{{item.price}}</view>
+  <view class='shuliang'>数量：{{item.number}}</view>
+  <view class='zongji'>
+  <text>总计: {{item.number*item.price}}</text>
+  <!-- <text bindtap='zhifu' class='fuqian'>支付</text> -->
+  </view>
+</view>

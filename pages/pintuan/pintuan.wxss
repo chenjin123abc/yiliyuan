@@ -1,0 +1,124 @@
+/**index.wxss**/
+page{
+  background-color:#EEEEEE;
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+.video{
+  width: 750rpx;
+  height: 300rpx;
+}
+.aboutus{
+  width: 750rpx;
+  height:180rpx;
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: row;
+  /* align-items: center; */
+ 
+}
+.aboutus-item{
+  width: 150rpx;
+  height: 150rpx;
+  /* display: flex; */
+}
+.naviga{
+  height: 150rpx；
+}
+.depart{
+  height: 20rpx;
+}
+.index_good{
+  height:600rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: end
+}
+.index_good_left{
+  width: 400rpx;
+  height: 400rpx;
+   display: flex;
+
+}
+.index_good_right{
+  width: 350rpx;
+  height: 400rpx;
+  
+}
+.imga{
+  width:400rpx;
+  height: 260rpx
+}
+.pintuan{
+  width: 750rpx;
+  height: 650rpx;
+  background-color: 	#FFE4E1
+}
+.txt{
+  font-size: 50rpx;
+  color: red;
+  font-style: oblique;
+  font-weight: 600;
+  font-family:fantasy
+}
+.little{
+  font-size: 30rpx;
+  color: grey
+}
+.boxpintuan{
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-between
+}
+.mengban{
+   width: 350rpx;
+   height: 500rpx;
+   background: white;
+}
+.imgs{
+  width: 300rpx;
+  height: 400rpx;
+  margin-left: 22.5rpx;
+  margin-top:10rpx;
+  display: flex;
+  flex-direction: row
+}
+.name{
+  font-size: 20rpx;
+  color: grey;
+  margin-left: 120rpx;
+}
+.price{
+  font-size: 35rpx;
+  color: red;
+  margin-left: 100rpx;
+}
+.fenge{
+  height: 15rpx;
+}
+.pinnumber{
+  height: 30rpx;
+  width: 350rpx;
+  background-color: white;
+  font-size: 18rpx;
+   color: grey;
+}
+

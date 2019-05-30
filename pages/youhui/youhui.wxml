@@ -1,0 +1,28 @@
+<!--pages/youhui/youhui.wxml-->
+<view class='scrol'>
+  <scroll-view scroll-x="true">
+    <view bindtap='select' data-my='my' class="{{selected?'title':'hidden'}}">未使用</view>
+    <view bindtap='select' data-wei='wei' class="{{select?'title':'hidden'}}">已使用</view>
+  </scroll-view>
+</view>
+
+<view class='fenbu' wx:for="{{myticket}}" wx:for-index="idx" wx:for-item="item" hidden='{{select}}'>
+<block >
+  <text class='money'>￥{{item.money}}</text>
+  <text class='moneyenv'>{{item.moneyenv}}</text>
+  <text class='lingquan'>{{item.shuoming}}</text>
+  <text class='time'>{{item.time}}(有效期)</text>
+  <text class='fanwei'>{{item.fanwei}}</text>
+  <image  class='youhui' src='../../img/youhui.jpg'></image>
+</block>
+</view>
+<view class='fenbu' wx:for="{{musedticket}}" hidden='{{selected}}'>
+<block >
+  <text class='money'>￥30</text>
+  <text class='moneyenv'>满100元可用</text>
+  <text class='lingquan'>优惠券说明</text>
+  <text class='time'>2019-05-20 ~ 2019-05-25(有效期)</text>
+  <text class='fanwei'>仅限于特色项目使用</text>
+  <image  class='youhui' src='../../img/youhui1.jpg'></image>
+</block>
+</view>

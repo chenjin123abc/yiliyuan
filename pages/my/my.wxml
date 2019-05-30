@@ -1,2 +1,44 @@
-<!--pages/my/my.wxml-->
-<view>my pages</view>
+<view class='mytpuxiang'>
+  <image src='../../img/my.jpg' class='myimage'></image>
+  <button class='mybutton' type='primary' size='mini' open-type='getUserInfo' bindgetuserinfo="onGotUserInfo">
+    <image src='{{touxiang}}' class='avatar'></image>
+  </button>
+  <text class='name'>{{name}}</text>
+</view>
+<view class='dafenge'></view>
+<view class='title'>
+  <text>我的订单</text>
+</view>
+<view class='xiaofenge'></view>
+<view class='mydingdan'>
+  <view wx:for="{{zhifu}}" wx:for-item="item">
+    <view>
+      <navigator url='{{item.url}}'>
+        <icon class='{{item.name}}' style='font-size:35px; color: pink;'></icon>
+        <view>
+          <text style='font-size:12px'>{{item.CH}}</text>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>
+<view class='dafenge'></view>
+
+<view wx:for="{{pintuan}}">
+  <view bindtap="getUrl" data-url='{{item.url}}' class='mytickit' style='border-bottom: grey  1rpx solid;'>
+    <view>
+      <icon class='{{item.name}}' style='{{item.style}}'>
+        <text style='font-size:12px; color:black'>{{item.CH}}</text>
+      </icon>
+    </view>
+    <view style='padding-top: 20px'>
+      <icon class='{{item.jiantou}}'></icon>
+    </view>
+  </view>
+
+  <!-- <view class='xiaofenge'></view> -->
+</view>
+<!-- <view hidden='{{show}}'><button class='mybutton' type='primary' size='mini' open-type='getUserInfo' bindgetuserinfo="onGotUserInfo">点击登录</button></view> -->
+<view>
+  <button class='mybutton' type='primary' size='mini' open-type='getPhoneNumber' bindgetphonenumber="getPhoneNumber">手机号授权</button>
+</view>

@@ -2,18 +2,69 @@
 //获取应用实例
 const app = getApp()
 
+
 Page({
   data: {
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    url: [{ url: "../../imggoods/miaosha.jpg", 
+          src:"../testpage/testpage",
+          name: "养颜三宝",
+          price:299,
+          number:12
+          },
+         { url: "../../imggoods/jianfei.jpg" ,
+           src: "../../page/shangpin/shangpin",
+           name: "减肥三宝" ,
+           price: 299,
+           number: 7
+              }],
+    tese:[
+      { src: "../../imggoods/1.jpg",
+        url:"../../page/pintuan/pintuan"
+      },
+      { src: "../../imggoods/2.jpg",
+        url: "../testpage/testpage"
+       },
+      { src: "../../imggoods/3.jpg",
+        url: "../testpage/testpage"
+       },
+    ],
+    caidan:[
+      {
+        url: "../aboutus/aboutus",
+        src:"../../img/company.jpg" 
+      },
+      {
+        url: "../getyouhui/getyouhui",
+        src: "../../img/kanjia.jpg"
+      },
+      {
+        url: "../miaosha/miaosha",
+        src: "../../img/miaosha.jpg"
+      },
+      {
+        url: "../pintuan/pintuan",
+        src: "../../img/togeter.jpg"
+      },
+      {
+        url: "../zhaopin/zhaopin",
+        src: "../../img/job1.jpg"
+      },
+    ],
+    
+    
   },
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({
       url: '../logs/logs'
     })
+  },
+  test:function(){
+    console.log(this.url);
   },
   onLoad: function () {
     if (app.globalData.userInfo) {

@@ -1,0 +1,90 @@
+/* pages/getyouhui/getyouhui.wxss */
+page{
+  background-color:#EEEEEE;
+}
+.imgbox{
+ 
+  padding-top: 10px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 12px;
+  
+}
+.youhui{
+  border-radius: 10px;
+  height: 260rpx;
+  width: 710rpx;
+}
+.money{
+  position:absolute;
+  z-index: 8;
+  padding-top: 20px;
+  padding-left: 35px;
+  font-size: 40px;
+  color: white;
+  
+}
+.tiaojian{
+  position:absolute;
+  z-index: 8;
+  padding-top: 25px;
+  padding-left: 150px;
+ font-size: 17px;
+ color: white
+}
+.tiaojian1{
+  position:absolute;
+  z-index: 8;
+  padding-top: 56px;
+  padding-left: 150px;
+ font-size: 10px;
+ color: white
+}
+.getyh{
+  border: none;
+  border-radius:30rpx;
+  position:fixed;
+  z-index: 8;
+  font-size: 22px;
+  height: 60rpx;
+  width: 150rpx;
+
+}
+.box{
+  position:fixed;
+  padding-top: 35px;
+  padding-left: 260px; 
+}
+.youxiao{
+
+  position:absolute;
+  z-index: 8;
+  padding-top: 90px;
+  padding-left: 20px;
+ font-size: 12px;
+  color: black
+}
+.fanwei{
+  position:absolute;
+  z-index: 8;
+  padding-top: 110px;
+  padding-left: 20px;
+ font-size: 12px;
+  color: black
+}
+.biaoti{
+  position:absolute;
+  z-index: 8;
+  padding-top: 38px;
+  padding-left: 15px;
+  font-size: 17px;
+  color: white;
+}
+.shuom{
+  margin: 20px;
+  font-size: 20px;
+  text-align: center;
+  color: rebeccapurple;
+  background: plum;
+  border-radius: 10px; 
+}

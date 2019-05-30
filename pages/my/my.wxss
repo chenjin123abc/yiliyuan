@@ -1,1 +1,63 @@
-/* pages/my/my.wxss */
+@import "../../base/iconfont.wxss";
+.mytpuxiang{
+   width: 750rpx;
+  height: 300rpx;
+}
+.myimage{
+  width: 750rpx;
+  height: 300rpx;
+  position:fixed;
+  z-index: 1
+}
+.avatar{
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    position: fixed;
+    z-index: 1;
+    left: 320rpx;
+    top: 80rpx;
+    display: flex;
+    justify-content:center;
+}
+.name{
+  font-size: 35rpx;
+  color: white;
+  font-family:'Times New Roman', Times, serif;
+  position: fixed; 
+  z-index: 1;
+  top: 220rpx;
+  width: 100%;
+  display: flex;
+  justify-content:center;
+}
+.dafenge{
+  padding-top: 8px;
+  margin-top: 10px;
+  background-color: gainsboro;
+  
+}
+.title{
+  margin-top: 5px;
+}
+.xiaofenge{
+  height: 2rpx;
+  /* padding-top: 20px; */
+  margin-top: 10px;
+  background-color: gainsboro;
+}
+.mydingdan{
+  display: flex;
+  flex-direction:row;
+  justify-content: space-around;
+}
+.mytickit{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+}
+.mybutton{
+  margin-left: 35%;
+  margin-top: 20px;
+}
