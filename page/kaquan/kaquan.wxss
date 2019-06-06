@@ -1,0 +1,28 @@
+/* page/kaquan/kaquan.wxss */
+page{
+  background-color:#F0F0F0;
+}
+.img{
+  width: 100%;
+  height: 50px;
+  position: relative;
+  
+}
+.zhifu{
+  position: absolute;
+  left: 40px;
+  line-height: 50px;
+  color: white
+}
+.kaquan{
+  width: 95%;
+  height: 210px; 
+  margin-left: 2.5%;
+  margin-top: 12px;
+ border-radius: 15px
+}
+.quan{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

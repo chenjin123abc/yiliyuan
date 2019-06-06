@@ -7,35 +7,42 @@ Page({
   data: {
     decode:true,
     people:[
-      {src:"../../img/people/liumengling.jpg",
+      {
+        src:"https://www.yiliyuan.vip/picture/img/people/liumengling.jpg",
         name:"刘梦玲",
         yanyu:"我要告诉全世界，微笑是最好妆容！"
       },
       {
-        src: "../../img/people/sunfang.jpg",
+        src: "https://www.yiliyuan.vip/picture/img/people/sunfang.jpg",
         name: "孙芳",
         yanyu: "优质的服务才能赢得顾客持久的信赖！"
       },
       {
-        src: "../../img/people/zhuxiu.jpg",
+        src: "https://www.yiliyuan.vip/picture/img/people/zhuxiu.jpg",
         name: "朱秀",
         yanyu: "相信团队的力量！"
       },
       {
-        src: "../../img/people/maolan.jpg",
+        src: "https://www.yiliyuan.vip/picture/img/people/maolan.jpg",
         name: "毛兰",
         yanyu: "爱美是一种人生态度！你，可以一直优雅的绽放下去！"
       },
       {
-        src: "../../img/people/miaomiao.jpg",
+        src: "https://www.yiliyuan.vip/picture/img/people/miaomiao.jpg",
         name: "苗苗",
         yanyu: "嘻嘻嘻！"
       },
       {
-        src: "../../img/people/yanyan.jpg",
+        src: "https://www.yiliyuan.vip/picture/img/people/yanyan.jpg",
         name: "燕燕",
         yanyu: "哈哈哈"
-      }
+      },
+      {
+        src: "https://www.yiliyuan.vip/picture/img/people/rongrong.jpg",
+        name: "燕燕",
+        yanyu: "哈哈哈"
+      },
+      {}
     ]
   },
 

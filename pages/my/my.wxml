@@ -23,20 +23,18 @@
   </view>
 </view>
 <view class='dafenge'></view>
-
-<view wx:for="{{pintuan}}">
-  <view bindtap="getUrl" data-url='{{item.url}}' class='mytickit' style='border-bottom: grey  1rpx solid;'>
-    <view>
-      <icon class='{{item.name}}' style='{{item.style}}'>
-        <text style='font-size:12px; color:black'>{{item.CH}}</text>
+<view class='mytickit'>
+  <view wx:for="{{pintuan}}" >
+    <view bindtap="getUrl" data-url='{{item.url}}'>
+      <icon class='{{item.name}} position' style='{{item.style}}'>
       </icon>
+      <text  class='position1'>{{item.CH}}</text>
+      <block class='jiantou'>
+        <icon class='{{item.jiantou}} jiantou'></icon>
+      </block>
     </view>
-    <view style='padding-top: 20px'>
-      <icon class='{{item.jiantou}}'></icon>
-    </view>
+    <!-- <view class='xiaofenge'></view> -->
   </view>
-
-  <!-- <view class='xiaofenge'></view> -->
 </view>
 <!-- <view hidden='{{show}}'><button class='mybutton' type='primary' size='mini' open-type='getUserInfo' bindgetuserinfo="onGotUserInfo">点击登录</button></view> -->
 <view>

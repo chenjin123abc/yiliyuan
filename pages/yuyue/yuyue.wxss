@@ -23,17 +23,24 @@
   padding-top: 10px;
   padding-left: 100px;
   font-weight:bold;
+  padding-bottom: 10px
 
 }
 .img{
-padding-top: 5px;
- width: 370rpx;
+/* padding-top: 5px; */
+ width: 300rpx;
   height: 380rpx;
+}
+.biankuang{
+  padding: 10rpx;
+  width: 300rpx;
+  height: 380rpx;
+  background-color: white
 }
 .pailie{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap
 }
 

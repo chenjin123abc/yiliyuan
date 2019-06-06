@@ -42,25 +42,26 @@
   height: 20rpx;
 }
 .index_good{
-  height:600rpx;
-  display: flex;
-  flex-direction: row;
-  justify-content: end
+height:600rpx;
+position: relative;
 }
 .index_good_left{
+  position: absolute;
   width: 400rpx;
-  height: 400rpx;
-   display: flex;
+  height: 530rpx;
 
 }
 .index_good_right{
+  position: absolute;
+  left: 420rpx;
   width: 350rpx;
   height: 400rpx;
   
 }
 .imga{
   width:400rpx;
-  height: 260rpx
+  height: 260rpx;
+  margin-bottom: 5rpx
 }
 .pintuan{
   width: 750rpx;
@@ -81,7 +82,7 @@
 .boxpintuan{
   display: flex;
   flex-direction: row; 
-  justify-content: space-between
+  justify-content:  space-around;
 }
 .mengban{
    width: 340rpx;

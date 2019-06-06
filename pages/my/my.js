@@ -22,13 +22,13 @@ Page({
         style:"font-size:30px; color:pink;padding-top: 18px"
       },
       { name: "iconfont icon-qiaquan", CH: "我的卡券",
-        url: "../testpage/testpage",
+        url: "../../page/kaquan/kaquan",
         jiantou: "iconfont icon-icon_arrow_right;text-align:center", 
         style: "font-size:30px; color:yellow;padding-top: 18px"
 
         },
       { name: "iconfont icon-miaosha", CH: "我的秒杀", 
-       url: "../testpage/testpage",
+       url: "../../page/mymiaosha/mymiaosha",
         jiantou: "iconfont icon-icon_arrow_right;text-align:center",
         style: "font-size:30px; color:red;padding-top: 18px"
 

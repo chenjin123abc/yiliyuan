@@ -11,27 +11,31 @@
 <view class='fenge'></view>
 <view class="xilie">- 抗衰修复系列 -</view>
 <view>
-  <view class='pailie' >
-  <view wx:for="{{kangshuai}}" wx:for-index="index" wx:for-item="item">
-    <navigator url='{{kangshuai[0].url}}'>
-      <image class='img' src='{{item.src}}'></image>
-    </navigator>
-    <view class='name'>{{item.productname}}</view>
-    <view class='price'>￥{{item.price}}</view>
-    <view class='sale'>已购{{item.sale}}件</view>
+  <view class='pailie'>
+    <view wx:for="{{kangshuai}}" wx:for-index="index" wx:for-item="item">
+      <view class='biankuang'>
+        <navigator url='{{kangshuai[0].url}}'>
+          <image class='img' src='{{item.src}}'></image>
+        </navigator>
+      </view>
+      <view class='name'>{{item.productname}}</view>
+      <view class='price'>￥{{item.price}}</view>
+      <view class='sale'>已购{{item.sale}}件</view>
+    </view>
   </view>
-</view>
 </view>
 
 <view class="xilie">- 纤体减肥系列 -</view>
 <view class='pailie'>
   <view wx:for="{{jianfei}}" wx:for-index="index" wx:for-item="item">
+  <view class='biankuang'>
     <navigator url='{{item.url}}'>
       <image class='img' src='{{item.src}}'></image>
     </navigator>
+    </view>
     <view class='name'>{{item.productname}}</view>
     <text class='price'>￥{{item.price}}</text>
     <text class='sale'>已购{{item.sale}}件</text>
   </view>
-  
+
 </view>

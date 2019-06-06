@@ -1,0 +1,7 @@
+<!--page/kadetail/kadetail.wxml-->
+<view>
+  <image class='kadetail' src='../../img/kadetail.jpg'></image>
+</view>
+<view class='name'>{{name}}</view>
+<view class='cishu'>服务次数：{{cishu}}</view>
+<view class='shengyu'>剩余次数：{{shengyu}}</view>

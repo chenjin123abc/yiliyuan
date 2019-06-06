@@ -1,0 +1,29 @@
+/* page/kadetail/kadetail.wxss */
+.kadetail{
+  width: 95%;
+  height: 210px;
+  border-radius: 12px;
+  margin-left: 2.5%;
+  position: relative
+}
+.name{
+  left: 40%;
+  font-size: 25px;
+  color: white;
+  font-family:'Times New Roman', Times, serif;
+  top: 40px;
+  position: absolute;
+  z-index: 20;
+}
+.cishu{
+  left: 60px;
+  top: 80px;
+  position: absolute;
+  z-index: 20;
+}
+.shengyu{
+  left: 60px;
+  top: 120px;
+  position: absolute;
+  z-index: 20;
+}

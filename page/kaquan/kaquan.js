@@ -1,31 +1,39 @@
-// pages/zhaopin/zhaopin.js
-var util=require("../../utils/util.js");
+// page/kaquan/kaquan.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    time: util.formatTime(new Date()),
+    ka:[
+      {src:"../../img/ka.jpg",
+       name:"贵宾卡",
+       cishu:30,
+       shengyu:30,
+       url:"../kadetail/kadetail"
+      },
+      { src: "../../img/nianka.jpg",
+        name: "年卡",
+        cishu: 30,
+        shengyu: 30,
+        url: "../kadetail/kadetail"
+       },
+      { src: "../../img/yueka.jpg",
+        name: "月卡",
+        cishu: 30,
+        shengyu: 30,
+        url: "../kadetail/kadetail"
+       },
+    ]
   },
-  getTime:function(e){
-    var newtime=e.detail.value;
-    this.setData({
-      time: newtime,
-    });
-   
-  },
-  formsubmit:function(e){
+  getdetail:function(e){
     console.log(e);
-    wx.showToast({
-      title: '提交成功',
-      icon: 'success',
-      duration: 2000
-    })
-  },
-  call:function(){
-    wx.makePhoneCall({
-      phoneNumber: '15872063523'
+    var cishu=e.currentTarget.dataset.cishu;
+    var name = e.currentTarget.dataset.name;
+    var shengyu = e.currentTarget.dataset.shengyu;
+    var url = e.currentTarget.dataset.url;
+    wx.navigateTo({
+      url: url + "?cishu=" + cishu+"&name="+name + "&shengyu=" + shengyu,
     })
   },
   /**

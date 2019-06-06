@@ -24,7 +24,10 @@
     "page/pintuan/pintuan",
     "page/ptzhifu/ptzhifu",
     "page/notpay/notpay",
-    "page/mypintuan/mypintuan"
+    "page/mypintuan/mypintuan",
+    "page/kaquan/kaquan",
+    "page/kadetail/kadetail",
+    "page/mymiaosha/mymiaosha"
   ],
   "window": {
     "backgroundTextStyle": "light",

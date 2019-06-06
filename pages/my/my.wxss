@@ -53,11 +53,27 @@
 }
 .mytickit{
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
   
 }
 .mybutton{
   margin-left: 35%;
   margin-top: 20px;
+}
+.jiantou{
+  position: absolute;
+  /* text-align: right; */
+   margin-left: 650rpx;
+    margin-top: 20px; 
+    font-size: 20px
+}
+.position{
+  position: relative;
+}
+.position1{
+  position: absolute;
+  margin-top: 27px; 
+  font-size: 15px;
+  left: 40px
 }

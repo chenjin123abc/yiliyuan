@@ -1,38 +1,35 @@
-// pages/zhaopin/zhaopin.js
-var util=require("../../utils/util.js");
+// page/mai/mai.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    time: util.formatTime(new Date()),
+    renshu: "3",
+    name: '爽肤水',
+    number: '3',
+    price: '200',
+    zongji: '',
+    src: '../../imggoods/1.jpg',
+    que: 2
   },
-  getTime:function(e){
-    var newtime=e.detail.value;
-    this.setData({
-      time: newtime,
-    });
-   
-  },
-  formsubmit:function(e){
-    console.log(e);
-    wx.showToast({
-      title: '提交成功',
-      icon: 'success',
-      duration: 2000
-    })
-  },
-  call:function(){
-    wx.makePhoneCall({
-      phoneNumber: '15872063523'
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var num = options.number;
+    var pri = options.price;
+    var zongji = pri * num;
 
+    this.setData({
+      renshu: options.renshu,
+      name: options.name,
+      number: options.number,
+      price: options.price,
+      zongji: zongji,
+      src: options.src
+    })
   },
 
   /**

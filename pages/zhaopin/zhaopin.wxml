@@ -1,28 +1,32 @@
-<!--pages/zhaopin/zhaopin.wxml-->
-<view ><image  src='../../img/zhaopin.jpg'  mode="aspectFill" class='biaoti'></image></view>
-<view class='shang'></view>
+<view>
+  <image src='../../img/zhaopin.jpg' mode="aspectFill" class='biaoti'></image>
+</view>
+<view class='shang'>诚聘</view>
+<view class='daiyu'>底薪+提成+年终奖</view>
 <form bindsubmit='formsubmit'>
-<view class='title'>
-  <view class='show'>请输入姓名：</view>
-  <input name="name" class='text' placeholder='姓名'></input>
-</view> 
-<view class='title'>
+  <view class='title'>
+    <view class='show'>请输入姓名：</view>
+    <input name="name" class='text' placeholder='姓名'></input>
+  </view>
+  <view class='title'>
     <label class='show'>请输入年龄：</label>
 
-    <input name="age" class='text' placeholder='年龄' ></input>
-</view>
-<view class='title'>
-    <label >请输入电话：</label>
+    <input name="age" class='text' type='number' placeholder='年龄'></input>
+  </view>
+  <view class='title'>
+    <label>请输入电话：</label>
     <input name="tel" class='text' placeholder='电话号码' type='number'></input>
-</view>
-<view class='title'>
-  <label >到职时间:</label>
-    <picker mode="date" value='2019-05-12'  fields="day" bindchange="getTime">
-      <input name="ruzhi" class='text' placeholder='点击选择入职时间' value='{{time}}'></input>
+  </view>
+  <view class='title'>
+    <label>到职时间:</label>
+    <picker mode="date"  fields="day" bindchange="getTime">
+      <input name="ruzhi" class='text' disabled='true' type='text'  value='{{time}}'></input>
     </picker>
-</view>
-<view style='text-align:center'>
-      <button style='width:220px;' type='primary' form-type="submit" value="提交" >提交</button>
-</view>
+  </view>
+  <view style='text-align:center'>
+    <button style='width:220px;' type='primary' form-type="submit" value="提交">提交</button>
+  </view>
 </form>
-<button size='mini' bindtap='call' type='warn' class='phone'>点击电话咨询</button>
+<view class='dibu'>
+  <button size='mini' bindtap='call' type='warn' class='phone'>点击电话咨询:15872063523</button>
+</view>

@@ -1,0 +1,12 @@
+<!--page/kaquan/kaquan.wxml-->
+<view>
+  <image class='img' src='../../img/dingdan.jpg'></image>
+  <text class='zhifu'>我的卡券</text>
+</view>
+<view class='quan'>
+  <view wx:for='{{ka}}' wx:for-iten='item' wx:for-index='index'>
+    <view bindtap='getdetail' data-name='{{item.name}}' data-url='{{item.url}}' data-cishu='{{item.cishu}}' data-shengyu='{{item.shengyu}}'>
+      <image class='kaquan' src='{{item.src}}'></image>
+    </view>
+  </view>
+</view>

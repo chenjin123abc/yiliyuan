@@ -2,58 +2,20 @@
 <view style='margin-top: 20px;'></view>
 <view class='title'>~~伊丽源美容养生会所~~</view>
 <view style='margin-top: 30px;'></view>
-<view  >
-<image class='img' mode='scaleToFill' src='../../img/laoban.jpg'></image>
-<text style='font-size:12px; text-indent:35px' decode='{{decode}}'  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;伊丽源成立于2006年，多年来一直致力于服务横沟爱美女士。自成立以来，始终坚持以科学严谨、诚信经营、尽心服务为经营理念，创造了无数个美丽奇迹，树立了良好的行业口碑。给无数女士带去了美丽和自信。作为一家有技术，有责任，有激情的美容机构，我们还能更高、更远的发展。愿我们的真诚服务和卓越的技术，让您收获永恒的美丽和成功！</text>
+<view class='shuoming'>
+  <image class='img' mode='scaleToFill' src='../../img/laoban.jpg'></image>
+  <text style='font-size:12px; text-indent:35px' decode='{{decode}}'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;伊丽源成立于2006年，多年来一直致力于服务横沟爱美女士。自成立以来，始终坚持以科学严谨、诚信经营、尽心服务为经营理念，创造了无数个美丽奇迹，树立了良好的行业口碑。给无数女士带去了美丽和自信。作为一家有技术，有责任，有激情的美容机构，我们还能更高、更远的发展。愿我们的真诚服务和卓越的技术，让您收获永恒的美丽和成功！</text>
 </view>
 <view style='margin-top: 20px;'></view>
 <view class="aboutus">我们的团队(Obout Us)</view>
 <view class='pintuan'>
-  <view class='biankuang'>
-    <navigator url='{{kangshuai[0].url}}'>
-    <image class='imgs' src='{{people[0].src}}'></image> 
-    </navigator>
-    <view class='name'>{{people[0].name}}</view>
-    <view class='yanyu'>{{people[0].yanyu}}</view>
-  </view>
-  <view class='biankuang'>
-    <navigator url='{{kangshuai[0].url}}'>
-    <image class='imgs' src='{{people[1].src}}'></image> 
-    </navigator>
-    <view class='name'>{{people[1].name}}</view>
-     <view class='yanyu'>{{people[1].yanyu}}</view>
+  <view wx:for="{{people}}" wx:for-item="item" wx:for-index="index">
+    <view class='{{item.src!=null?"biankuang":"none"}}'>
+      <navigator url='{{kangshuai[0].url}}'>
+        <image class='imgs' src='{{item.src}}'></image>
+      </navigator>
     </view>
+    <view class='name'>{{item.name}}</view>
+    <view class='{{item.src!=null?"yanyu":"none"}}'>{{item.yanyu}}</view>
   </view>
-  <view class='pintuan'>
-  <view class='biankuang'>
-  <navigator url='{{kangshuai[0].url}}'>
-    <image class='imgs' src='{{people[2].src}}'></image> 
-    </navigator>
-    <view class='name'>{{people[2].name}}</view>
-    <view class='yanyu'>{{people[2].yanyu}}</view>
-  </view>
-  <view class='biankuang'>
-    <navigator url='{{kangshuai[0].url}}'>
-    <image class='imgs' src='{{people[3].src}}'></image> 
-    </navigator>
-    <view class='name'>{{people[3].name}}</view>
-    <view class='yanyu'>{{people[3].yanyu}}</view>
-  </view>
-  </view>
-    <view class='pintuan'>
-  <view class='biankuang'>
-  <navigator url='{{kangshuai[0].url}}'>
-    <image class='imgs' src='{{people[4].src}}'></image> 
-    </navigator>
-    <view class='name'>{{people[4].name}}</view>
-    <view class='yanyu'>{{people[4].yanyu}}</view>
-  </view>
-  <view class='biankuang'>
-    <navigator url='{{kangshuai[0].url}}'>
-    <image class='imgs' src='{{people[5].src}}'></image> 
-    </navigator>
-    <view class='name'>{{people[5].name}}</view>
-    <view class='yanyu'>{{people[5].yanyu}}</view>
-  </view>
-  </view>
-
+</view>

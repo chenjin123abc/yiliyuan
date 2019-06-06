@@ -14,9 +14,7 @@
 </view>
 <view class='index_good'>
   <navigator url='{{tese[0].url}}'>
-    <view class='index_good_left'>
-      <image src='{{tese[0].src}}'></image>
-    </view>
+      <image class='index_good_left' src='{{tese[0].src}}'></image>
   </navigator>
   <view class='index_good_right'>
     <navigator url='{{tese[1].url}}'>
@@ -35,7 +33,7 @@
 
   <view class='boxpintuan'>
     <view class='mengban' wx:for="{{url}}" wx:for-index="index" wx:for-item="item">
-      <navigator class='naviga' url='{{item.src}}'>
+      <navigator class='naviga' url='{{item.src}}?name={{item.name}}&price={{item.price}}&number={{item.number}}'>
         <image src='{{item.url}}' class='imgs'></image>
       </navigator>
       <view class='name'>{{item.name}}</view>

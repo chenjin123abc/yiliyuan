@@ -1,38 +1,24 @@
-// pages/zhaopin/zhaopin.js
-var util=require("../../utils/util.js");
+// page/kadetail/kadetail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    time: util.formatTime(new Date()),
+    cishu:"",
+    shengyu:"",
+    name:""
   },
-  getTime:function(e){
-    var newtime=e.detail.value;
-    this.setData({
-      time: newtime,
-    });
-   
-  },
-  formsubmit:function(e){
-    console.log(e);
-    wx.showToast({
-      title: '提交成功',
-      icon: 'success',
-      duration: 2000
-    })
-  },
-  call:function(){
-    wx.makePhoneCall({
-      phoneNumber: '15872063523'
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+         cishu:options.cishu,
+         name:options.name,
+         shengyu:options.shengyu
+    })
   },
 
   /**
