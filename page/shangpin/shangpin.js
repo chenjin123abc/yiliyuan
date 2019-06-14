@@ -7,25 +7,13 @@ Page({
   data: {
     shoucang: 0,
     goumaiyemian: "../../imggoods/1.jpg",
-    img: [{
-        src: "../../imggoods/1.jpg",
-        url: "../../pages/testpage/testpage"
-      },
-      {
-        src: "../../imggoods/2.jpg",
-        url: "../testpage/testpage"
-      },
-      {
-        src: "../../imggoods/3.jpg",
-        url: "../testpage/testpage"
-      },
-    ],
-    name: "因子微雕",
-    price: 2980,
-    xiaol: 12,
-    yuanjia: 3980,
-    kucun:23,
-    guige:"盒",
+    img: [],
+    name: "",
+    price: "",
+    xiaol: "",
+    yuanjia: "",
+    kucun:"",
+    guige:"",
     shuliang:1,
   },
   onShareAppMessage: function() {
@@ -34,7 +22,6 @@ Page({
       desc: '最具人气的小程序开发联盟!',
       path: '/page/user?id=123'
     }
-
   },
   mai:function(e){
     var price=e.currentTarget.dataset.price;
@@ -63,7 +50,7 @@ Page({
     })
   },
   previewImage: function (t) {
-    console.log(t);
+    // console.log(t);
     var e = t.currentTarget.dataset.url;
     wx.previewImage({
       current:e,
@@ -115,6 +102,17 @@ Page({
    */
   onLoad: function(options) {
     console.log(options);
+    var arr = { "src": options.src} ;
+     this.setData({
+       img: [arr],
+       name: options.productname,
+       price: options.price,
+       xiaol: options.sale,
+       yuanjia: options.yuanjia,
+       kucun: options.kucun,
+       guige: options.guige,
+       goumaiyemian: options.src
+     })
   },
   //主要购物车
   gouwu: function(e) {
@@ -123,7 +121,7 @@ Page({
     })
   },
   shou: function() {
-    console.log(this.data.shoucang);
+    // console.log(this.data.shoucang);
     if (this.data.shoucang == 0) {
       this.setData({
         shoucang: 1

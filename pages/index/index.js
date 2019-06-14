@@ -6,36 +6,8 @@ Page({
   data: {
     motto: 'Hello World',
     userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    url: [{
-      url: "https://www.yiliyuan.vip//picture/img/imggoods/miaosha.jpg", 
-          src:"../testpage/testpage",
-          name: "养颜三宝",
-          price:299,
-          number:12
-          },
-      {
-        url: "https://www.yiliyuan.vip//picture/img/imggoods/jianfei.jpg" ,
-           src: "../../page/shangpin/shangpin",
-           name: "减肥三宝" ,
-           price: 299,
-           number: 7
-              }],
-    tese:[
-      {
-        src: "https://www.yiliyuan.vip//picture/img/imggoods/1.jpg",
-        url:"../../page/pintuan/pintuan"
-      },
-      {
-        src: "https://www.yiliyuan.vip//picture/img/imggoods/2.jpg",
-        url: "../testpage/testpage"
-       },
-      {
-        src: "https://www.yiliyuan.vip//picture/img/imggoods/3.jpg",
-        url: "../testpage/testpage"
-       },
-    ],
+    url: [],
+    tese:[],
     caidan:[
       {
         url: "../aboutus/aboutus",
@@ -67,36 +39,64 @@ Page({
       url: '../logs/logs'
     })
   },
+  getDetail: function (e) {
+    // console.log(e);
+    var price = e.currentTarget.dataset.price;
+    var sale = e.currentTarget.dataset.sale;
+    var productname = e.currentTarget.dataset.productname;
+    var src = e.currentTarget.dataset.src;
+    var yuanjia = e.currentTarget.dataset.yuanjia;
+    var kucun = e.currentTarget.dataset.kucun;
+    var guige = e.currentTarget.dataset.guige;
+    wx.navigateTo({
+      url: '../../page/shangpin/shangpin?price=' + price + '&sale=' + sale + '&productname=' + productname + '&src=' + src + '&yuanjia=' + yuanjia + '&kucun=' + kucun + '&guige=' + guige,
+    })
+  },
   test:function(){
     console.log(this.url);
   },
-  onLoad: function () {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
+  onLoad: function (options) {
+    var _this=this;
+    wx.request({
+      url: 'https://www.yiliyuan.vip/index.php/api/productsIndex', 
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success:function(res){
+        var product=res.data.data;
+        for (var i = 0; i < product.length; i++) {
+          var objProdyct = product[i];
+          if (objProdyct.tese == "1") {
+            var middle = {
+              src: objProdyct.path,
+              productname: objProdyct.title,
+              price: objProdyct.price,
+              sale: objProdyct.salenumber,
+              yuanjia: objProdyct.yuanjia,
+              kucun: objProdyct.kucun,
+              guige: objProdyct.guige
+            };
+            _this.setData({
+              tese: _this.data.tese.concat(middle),
+            })
+
+          } else if (objProdyct.pintuan == "1") {
+            var middle = {
+              src: objProdyct.path,
+              productname: objProdyct.title,
+              price: objProdyct.price,
+              sale: objProdyct.salenumber,
+              yuanjia: objProdyct.yuanjia,
+              kucun: objProdyct.kucun,
+              guige: objProdyct.guige
+            };
+            _this.setData({
+              url: _this.data.url.concat(middle),
+            })
+          }
         }
-      })
-    }
+      },
+    })
   },
   getUserInfo: function(e) {
     console.log(e)

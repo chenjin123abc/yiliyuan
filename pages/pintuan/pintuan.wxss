@@ -1,124 +1,89 @@
 /**index.wxss**/
-page{
-  background-color:#EEEEEE;
-}
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+page {
+  background-color: #eee;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.naviga {
+  height: 150rpx；;
 }
 
-.userinfo-nickname {
-  color: #aaa;
-}
-
-.usermotto {
-  margin-top: 200px;
-}
-.video{
-  width: 750rpx;
-  height: 300rpx;
-}
-.aboutus{
-  width: 750rpx;
-  height:180rpx;
-  display: flex;
-  /* justify-content: center; */
-  flex-direction: row;
-  /* align-items: center; */
- 
-}
-.aboutus-item{
-  width: 150rpx;
-  height: 150rpx;
-  /* display: flex; */
-}
-.naviga{
-  height: 150rpx；
-}
-.depart{
-  height: 20rpx;
-}
-.index_good{
-  height:600rpx;
-  display: flex;
-  flex-direction: row;
-  justify-content: end
-}
-.index_good_left{
+.imga {
   width: 400rpx;
-  height: 400rpx;
-   display: flex;
+  height: 260rpx;
+}
 
-}
-.index_good_right{
-  width: 350rpx;
-  height: 400rpx;
-  
-}
-.imga{
-  width:400rpx;
-  height: 260rpx
-}
-.pintuan{
+.pintuan {
   width: 750rpx;
   height: 650rpx;
-  background-color: 	#FFE4E1
+  background-color: #ffe4e1;
 }
-.txt{
+
+.txt {
   font-size: 50rpx;
   color: red;
   font-style: oblique;
   font-weight: 600;
-  font-family:fantasy
-}
-.little{
-  font-size: 30rpx;
-  color: grey
-}
-.boxpintuan{
-  display: flex;
-  flex-direction: row; 
-  justify-content: space-between
-}
-.mengban{
-   width: 350rpx;
-   height: 500rpx;
-   background: white;
-}
-.imgs{
-  width: 300rpx;
-  height: 400rpx;
-  margin-left: 22.5rpx;
-  margin-top:10rpx;
-  display: flex;
-  flex-direction: row
-}
-.name{
-  font-size: 20rpx;
-  color: grey;
-  margin-left: 120rpx;
-}
-.price{
-  font-size: 35rpx;
-  color: red;
-  margin-left: 100rpx;
-}
-.fenge{
-  height: 15rpx;
-}
-.pinnumber{
-  height: 30rpx;
-  width: 350rpx;
-  background-color: white;
-  font-size: 18rpx;
-   color: grey;
+  font-family: fantasy;
 }
 
+.little {
+  font-size: 30rpx;
+  color: grey;
+}
+
+.boxpintuan {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.mengban {
+  width: 300rpx;
+  height: 500rpx;
+  background: white;
+  padding: 10px;
+  position: relative;
+  margin-bottom: 10px
+}
+
+.imgs {
+  position: relative;
+  width: 300rpx;
+  height: 400rpx;
+}
+
+.name {
+  font-size: 20rpx;
+  color: grey;
+  text-align: center;
+}
+
+.price {
+  position: relative;
+  font-size: 35rpx;
+  color: red;
+}
+
+.fenge {
+  height: 15rpx;
+}
+
+.pinnumber {
+  height: 30rpx;
+  width: 300rpx;
+  background-color: white;
+  font-size: 18rpx;
+  color: grey;
+  margin-left: 10rpx;
+}
+.yuanjia{
+  text-decoration:line-through;
+  font-size: 12px;
+  color: gray;
+  left: 80px;
+}
+.none{
+   opacity: 0;
+}

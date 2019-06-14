@@ -23,7 +23,6 @@
       <image src='../../img/fenxiang.jpg' style="width: 27px;height: 27px"></image>
       <view>分享</view>
     </button>
-
   </view>
 </view>
 <view class='xuanze' bindtap='show'>
@@ -97,12 +96,14 @@
   </view>
   <view class='shuliang'>数量</view>
   <view bindtap='jian' class='tiaojie' style='text-align:center'>
-  <view class=' iconfont icon-jian' style='font-size:8px'></view>
+    <view class=' iconfont icon-jian' style='font-size:8px'></view>
   </view>
   <view class='tiaojie1'>
-  <view ><input type='text' value='{{shuliang}}'></input></view>
+    <view>
+      <input type='text' value='{{shuliang}}'></input>
+    </view>
   </view>
   <view bindtap='jia' class='tiaojie2' style='text-align:center'>
-  <view class=' iconfont icon-jia' style='font-size:8px'></view>
+    <view class=' iconfont icon-jia' style='font-size:8px'></view>
   </view>
 </view>

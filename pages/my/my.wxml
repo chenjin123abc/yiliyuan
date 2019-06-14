@@ -33,10 +33,9 @@
         <icon class='{{item.jiantou}} jiantou'></icon>
       </block>
     </view>
-    <!-- <view class='xiaofenge'></view> -->
   </view>
 </view>
-<!-- <view hidden='{{show}}'><button class='mybutton' type='primary' size='mini' open-type='getUserInfo' bindgetuserinfo="onGotUserInfo">点击登录</button></view> -->
+
 <view>
-  <button class='mybutton' type='primary' size='mini' open-type='getPhoneNumber' bindgetphonenumber="getPhoneNumber">手机号授权</button>
+  <button hidden='{{showbutton}}' class='mybutton' type='primary' size='mini' open-type='getPhoneNumber' bindgetphonenumber="getPhoneNumber">手机号授权</button>
 </view>

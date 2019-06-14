@@ -4,7 +4,6 @@
   flex-direction: column;
   align-items: center;
 }
-
 .userinfo-avatar {
   width: 128rpx;
   height: 128rpx;
@@ -49,25 +48,24 @@ position: relative;
   position: absolute;
   width: 400rpx;
   height: 530rpx;
-
 }
 .index_good_right{
   position: absolute;
   left: 420rpx;
   width: 350rpx;
   height: 400rpx;
-  
 }
 .imga{
   width:400rpx;
   height: 260rpx;
   margin-bottom: 5rpx
 }
-.pintuan{
-  width: 750rpx;
-  height: 650rpx;
-  background-color: 	#FFE4E1
-}
+/* .pintuan{
+  display: flex;
+  flex-direction: row;
+ justify-content: space-between;
+  flex-wrap:wrap;
+} */
 .txt{
   font-size: 50rpx;
   color: red;
@@ -82,7 +80,8 @@ position: relative;
 .boxpintuan{
   display: flex;
   flex-direction: row; 
-  justify-content:  space-around;
+  justify-content: space-between;
+  flex-wrap:wrap;
 }
 .mengban{
    width: 340rpx;

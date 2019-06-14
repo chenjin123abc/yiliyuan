@@ -1,11 +1,11 @@
 <!--pages/yuyue/yuyue.wxml-->
 <swiper indicator-dots='true' indicator-color='red' duration='1000' autoplay='true' interval='3000'>
-  <block wx:for="{{img}}">
-    <navigator url="{{item.url}}">
+  <block wx:for="{{img}}" wx:for-item="item" wx:for-index="index">
+    <view data-src='{{item.src}}' data-xiaol='{{item.salenumber}}' data-yuanjia='{{item.yuanjia}}' data-kucun='{{item.kucun}}' data-guige='{{item.guige}}' data-price='{{item.price}}' data-sale='{{item.sale}}' data-productname='{{item.productname}}' bindtap="getDetail">
       <swiper-item>
         <image class='swip' src="{{item.src}}"></image>
       </swiper-item>
-    </navigator>
+    </view>
   </block>
 </swiper>
 <view class='fenge'></view>
@@ -14,13 +14,13 @@
   <view class='pailie'>
     <view wx:for="{{kangshuai}}" wx:for-index="index" wx:for-item="item">
       <view class='biankuang'>
-        <navigator url='{{kangshuai[0].url}}'>
+        <view data-src='{{item.src}}' data-xiaol='{{item.salenumber}}' data-yuanjia='{{item.yuanjia}}' data-kucun='{{item.kucun}}' data-guige='{{item.guige}}' data-price='{{item.price}}' data-sale='{{item.sale}}' data-productname='{{item.productname}}' bindtap="getDetail">
           <image class='img' src='{{item.src}}'></image>
-        </navigator>
+        </view>
       </view>
-      <view class='name'>{{item.productname}}</view>
-      <view class='price'>￥{{item.price}}</view>
-      <view class='sale'>已购{{item.sale}}件</view>
+      <view class='{{item.src!=null?"name":"none"}}'>{{item.productname}}</view>
+      <view class='{{item.src!=null?"price":"none"}}'>￥{{item.price}}</view>
+      <view class='{{item.src!=null?"sale":"none"}}'>已购{{item.sale}}件</view>
     </view>
   </view>
 </view>
@@ -28,14 +28,14 @@
 <view class="xilie">- 纤体减肥系列 -</view>
 <view class='pailie'>
   <view wx:for="{{jianfei}}" wx:for-index="index" wx:for-item="item">
-  <view class='biankuang'>
-    <navigator url='{{item.url}}'>
-      <image class='img' src='{{item.src}}'></image>
-    </navigator>
+    <view class='{{item.src!=null?"biankuang":"none"}}'>
+      <view data-src='{{item.src}}' data-xiaol='{{item.salenumber}}' data-yuanjia='{{item.yuanjia}}' data-kucun='{{item.kucun}}' data-guige='{{item.guige}}' data-price='{{item.price}}' data-sale='{{item.sale}}' data-productname='{{item.productname}}' bindtap="getDetail">
+        <image class='img' src='{{item.src}}'></image>
+      </view>
     </view>
-    <view class='name'>{{item.productname}}</view>
-    <text class='price'>￥{{item.price}}</text>
-    <text class='sale'>已购{{item.sale}}件</text>
+    <view class='{{item.src!=null?"name":"none"}}'>{{item.productname}}</view>
+    <text class='{{item.src!=null?"price":"none"}}'>￥{{item.price}}</text>
+    <text class='{{item.src!=null?"sale":"none"}}'>已购{{item.sale}}件</text>
   </view>
 
 </view>

@@ -27,7 +27,6 @@
 
 }
 .img{
-/* padding-top: 5px; */
  width: 300rpx;
   height: 380rpx;
 }
@@ -58,4 +57,7 @@
 }
 page{
   background-color: 	#FFE4E1
+}
+.none{
+   opacity: 0;
 }

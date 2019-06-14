@@ -2,7 +2,7 @@
 <video class="video" src='https://17299421.s21v.faiusr.com/58/ABUIABA6GAAgmui73QUot4GTkQc.mp4' object-fit='cover'></video>
 <view class='depart'></view>
 <view class="aboutus">
-  <view class='aboutus-item' wx:for="{{caidan}}" wx:for-index="index" wx:for-item="item">
+  <view class='aboutus-item' wx:for="{{caidan}}" wx:for-index="index" wx:for-item="item" wx:key="id">
     <navigator class='naviga' url='{{item.url}}'>
       <image src='{{item.src}}' class='aboutus-item'></image>
     </navigator>
@@ -13,34 +13,31 @@
   <text class='txt'>特色项目</text>
 </view>
 <view class='index_good'>
-  <navigator url='{{tese[0].url}}'>
-      <image class='index_good_left' src='{{tese[0].src}}'></image>
-  </navigator>
+  <view data-src='{{tese[0].src}}' data-xiaol='{{tese[0].salenumber}}' data-yuanjia='{{tese[0].yuanjia}}' data-kucun='{{tese[0].kucun}}' data-guige='{{tese[0].guige}}' data-price='{{tese[0].price}}' data-sale='{{tese[0].sale}}' data-productname='{{tese[0].productname}}'
+    bindtap="getDetail">
+    <image class='index_good_left' src='{{tese[0].src}}'></image>
+  </view>
   <view class='index_good_right'>
-    <navigator url='{{tese[1].url}}'>
+    <view data-src='{{tese[1].src}}' data-xiaol='{{tese[1].salenumber}}' data-yuanjia='{{tese[1].yuanjia}}' data-kucun='{{tese[1].kucun}}' data-guige='{{tese[1].guige}}' data-price='{{tese[1].price}}' data-sale='{{tese[1].sale}}' data-productname='{{tese[1].productname}}'
+      bindtap="getDetail">
       <image class="imga" src='{{tese[1].src}}'></image>
-    </navigator>
-    <navigator url='{{tese[2].url}}'>
+    </view>
+    <view data-src='{{tese[2].src}}' data-xiaol='{{tese[2].sale}}' data-yuanjia='{{tese[2].yuanjia}}' data-kucun='{{tese[2].kucun}}' data-guige='{{tese[2].guige}}' data-price='{{tese[2].price}}' data-sale='{{tese[2].sale}}' data-productname='{{tese[2].productname}}'
+      bindtap="getDetail">
       <image class="imga" src='{{tese[2].src}}'></image>
-    </navigator>
+    </view>
   </view>
 </view>
-<view class='pintuan'>
-  <text class='txt'>限量拼团</text>
-  <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;  </text>
-  <text class="little">特惠拼团，每日必逛</text>
-  <text decode='{{true}}'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;更多></text>
 
-  <view class='boxpintuan'>
-    <view class='mengban' wx:for="{{url}}" wx:for-index="index" wx:for-item="item">
-      <navigator class='naviga' url='{{item.src}}?name={{item.name}}&price={{item.price}}&number={{item.number}}'>
-        <image src='{{item.url}}' class='imgs'></image>
-      </navigator>
-      <view class='name'>{{item.name}}</view>
-      <view class='price'>￥{{item.price}}</view>
-      <view class='fenge'></view>
-      <view decode='{{true}}' class='pinnumber'>已拼{{item.number}}件</view>
+<text class='txt'>限量拼团</text>
+<text class="little">特惠拼团，每日必逛</text>
+<view class='boxpintuan'>
+  <view class='mengban' wx:for="{{url}}" wx:for-index="index" wx:for-item="item" wx:key="id">
+    <view data-src='{{item.src}}' data-xiaol='{{item.sale}}' data-yuanjia='{{item.yuanjia}}' data-kucun='{{item.kucun}}' data-guige='{{item.guige}}' data-price='{{item.price}}' data-sale='{{item.sale}}' data-productname='{{item.productname}}' bindtap="getDetail">
+      <image src='{{item.src}}' class='imgs'></image>
     </view>
-
+    <view class='name'>{{item.productname}}</view>
+    <view class='price'>￥{{item.price}}</view>
+    <view decode='{{true}}' class='pinnumber'>已拼{{item.sale}}件</view>
   </view>
 </view>
