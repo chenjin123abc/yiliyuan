@@ -1,0 +1,29 @@
+<!--page/mai/mai.wxml-->
+<view>
+  <image class='img' src='../../img/dingdan.jpg'></image>
+  <text class='zhifu'>拼团支付</text>
+</view>
+<view class='xiangxi '>
+  <image class='good' src='{{src}}'></image>
+  <view class='name'>{{name}}</view>
+  <view class='danjia'>￥{{price}}</view>
+  <view class='shuliang'>数量：x{{number}}</view>
+</view>
+<view class='zhong'>
+  <view style='padding-left:10%;width: 180px;position: absolute;'>规格：</view>
+  <view class='guige'>{{guige}}</view>
+</view>
+<view>
+<button wx:if="{{shar}}" data-pname='{{name}}' data-number='{{number}}' data-price='{{price}}' data-src='{{src}}' data-id='{{id}}' open-type='share' style='background-color:#ff4544;color:white;margin-top:60px'>成为团长</button>
+</view>
+<view class='gou flex-row flex-grow-1'>
+<view  class='flex-grow-1 flex-y-center flex-x-center zongjia'>总计:
+  <view>￥{{zongji}}</view>
+</view>
+  <view bindtap='buy' class='flex-grow-1 flex-y-center flex-x-center buy-now'>立即购买</view>
+</view>
+
+
+
+
+

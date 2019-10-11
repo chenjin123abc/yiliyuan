@@ -1,0 +1,7 @@
+<!--page/getuserinfo/getuserinfo.wxml-->
+<view class='incenter'><image class='logo' src='../../img/laoban.jpg'></image></view>
+<view class='incentertext'>横沟伊丽源美容院申请获得您的手机号</view>
+<view class='littletext'>获得您绑定微信的手机号</view>
+<view style='text-align:center'>
+<button class="btn"   type='primary'  open-type='getPhoneNumber' bindgetphonenumber="getPhoneNumber">确认授权</button>
+</view>

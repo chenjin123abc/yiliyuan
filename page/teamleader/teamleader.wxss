@@ -1,0 +1,269 @@
+/* page/shangpin/shangpin.wxss */
+@import "../../base/iconfont.wxss";
+page{
+  background-color:F0FFF0;
+}
+.swip{
+  height: 350px
+}
+.juzhong{
+  text-align: center;
+}
+.image{
+  width: 750rpx;
+  height: 350px
+}
+.fenxiang{
+  position: absolute;
+  left: 300px;
+  
+  width: 60px;
+  font-size: 15px
+}
+.name{
+  margin-top:10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+.price{
+  color: red;
+  font-size: 25px;
+  margin-left: 10px;
+  
+
+}
+.yuanjia{
+  text-decoration:line-through;
+  font-size: 12px;
+  color: gray;
+}
+.xiaoliang{
+  font-size: 15px;
+  margin-left: 10px;
+  color: grey
+}
+.share-btn {
+    line-height: normal;
+    padding: 0 10rpx;
+    border: none;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+    display: inline-block;
+    font-size: 8pt;
+}
+button::after{
+    border: 0;
+    
+}
+.flex-grow-0 {
+  position: absolute;
+  left: 300px;
+  top: 10px;
+
+}
+.goods-pic-box {
+    position: absolute;
+    width: 200rpx;
+}
+.flex-row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    flex-direction: row;
+}
+
+
+.flex-grow-1 {
+    min-width: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+}
+.page__hd{
+  display: flex;
+  flex-direction: row;
+
+}
+.flex-grow-1 {
+    min-width: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+}
+.flex-y-center {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
+    align-items: center;
+}
+.flex-x-center {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.add-cart {
+    background: #f39800;
+    color: #fff;
+    font-size: 15px
+}
+.buy-now {
+    background: #ff4544;
+    color: #fff;
+    font-size: 15px
+}
+.flex-row {
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    flex-direction: row;
+   
+}
+.zhuye{
+  font-size: 30px;
+}
+.buttom-border{
+  border: 1px solid gainsboro;
+  width: 50px;
+  text-align: center;
+  background: #fff;
+}
+.xuanze{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-top: 4px solid gainsboro;
+  border-bottom: 4px solid gainsboro;
+  height: 35px;
+  position: relative;
+}
+.inside{
+ 
+  position: absolute;
+  left: 13px;
+  line-height:35px;
+}
+.detai{
+  margin-top: 20px;
+}
+.commodity_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  overflow: hidden;
+  z-index: 1000;
+  color: #fff;
+}
+/*对话框 */
+.commodity_attr_box {
+  height: 550rpx;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+  background: #fff;
+  padding-top: 20rpx;
+}
+.guanbi{
+  position: fixed;
+  left: 85%;
+  top: 15px;
+}
+.shang{
+  z-index: 8;
+  height: 160rpx;
+  border-bottom: 1px solid gainsboro;
+  position: relative;
+}
+.zhong{
+  height: 160rpx;
+  border-bottom: 1px solid gainsboro;
+}
+.xia{
+
+}
+.shouimg{
+  border-bottom: 0.5px solid #e3e3e3;
+  padding: 1px 2px;
+  z-index: 10px;
+  position: absolute;
+  top: -10px;
+  left: 12px;
+  width: 80px;
+  height: 80px
+}
+.tanprice{
+  position: absolute;
+  left: 110px;
+  top: 5px;
+  color:red;
+  font-size: 15px;
+}
+.kucun{
+  position: absolute;
+  left: 110px;
+  top: 35px;
+  color: gray;
+  font-size: 15px;
+}
+.guige{
+  margin-left: 30px;
+  margin-top: 10px;
+  width: 60px;
+  background-color: red;
+  text-align: center;
+  border-radius: 30px;
+}
+.shuliang{
+  position: absolute;
+  margin-left: 10px;
+  margin-top: 22.5px;
+  font-size: 20px
+}
+.tiaojie{
+  position: absolute;
+  margin-left: 60%;
+  margin-top: 18px;
+  background: #EAEAEA;
+  width: 30px;
+  height: 30px;
+  line-height: 30px
+}
+.tiaojie1{
+  position: absolute;
+  margin-left: 70%;
+  margin-top: 18px;
+  border: 1px solid black;
+  width: 55px;
+  height: 30px;
+  background: #EAEAEA;
+  text-align: center;
+  line-height: 30px
+}
+.tiaojie2{
+  position: absolute;
+  margin-left: 87%;
+  margin-top: 18px;
+  background: #EAEAEA;
+  width: 30px;
+  height: 30px;
+   line-height: 30px
+}
